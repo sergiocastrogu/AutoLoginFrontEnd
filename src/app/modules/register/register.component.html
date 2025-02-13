@@ -1,0 +1,51 @@
+<div class="register-page">
+  <div class="form-container">
+    <h1 class="title">Regístrate</h1>
+    <p class="subtitle">Completa tus datos para crear una cuenta</p>
+    <form [formGroup]="form" class="register-form">
+      <mat-form-field appearance="outline">
+        <mat-label>Identificación</mat-label>
+        <input matInput type="text" formControlName="identification" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Primer Nombre</mat-label>
+        <input matInput type="text" formControlName="firstName" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Segundo Nombre (Opcional)</mat-label>
+        <input matInput type="text" formControlName="secondName" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Primer Apellido</mat-label>
+        <input matInput type="text" formControlName="firstLastName" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Segundo Apellido (Opcional)</mat-label>
+        <input matInput type="text" formControlName="secondLastName" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Número de Teléfono (Opcional)</mat-label>
+        <input matInput type="tel" formControlName="phoneNumber" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Correo Electrónico</mat-label>
+        <input matInput type="email" formControlName="email" autocomplete="off" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" autocomplete="off" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="btn-register" (click)="register()" [disabled]="form.invalid">
+        Crear Cuenta
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="viewer">
+  <div class="container">
+    <h1>Detalle de Usuario</h1>
+    <div class="card">
+      <ul>
+        <li><strong>ID:</strong> {{ userData.id }}</li>
+        <li><strong>Identificación:</strong> {{ userData.identification }}</li>
+        <li>
+          <strong>Nombre Completo:</strong>
+          {{ userData.firstName }} {{ userData.secondName || '' }}
+          {{ userData.firstLastName }} {{ userData.secondLastName }}
+        </li>
+        <li><strong>Correo Electrónico:</strong> {{ userData.email }}</li>
+        <li><strong>Teléfono:</strong> {{ userData.phone_Number || 'No disponible' }}</li>
+        <li><strong>Estado:</strong> {{ userData.status === 0 ? 'Inactivo' : 'Activo' }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
